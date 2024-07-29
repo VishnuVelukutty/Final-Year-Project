@@ -48,8 +48,8 @@
       },
       "outputs": [
         {
-          "output_type": "stream",
           "name": "stdout",
+          "output_type": "stream",
           "text": [
             "Positive tweets percentage: 31.08108108108108 %\n",
             "Negative tweets percentage: 24.324324324324323 %\n",
@@ -90,10 +90,10 @@
       "source": [
         "class TwitterClient(object):\n",
         "  def __init__(self):\n",
-        "    consumer_key = 'Md62QXFXjgRdNz9u17EfZ7XOG'\n",
-        "    consumer_secret = '0hjrTpVw9rJbscrnSvNPGyMKYO7Mo034Cis2yHEYXdNVE1ysmq'\n",
-        "    access_token = '4763401478-EqszrF7Gbp4weCIpQOP1FfM4fSzJkp1JdpNfLwi'\n",
-        "    access_token_secret = 'VhgP4bwYYlV9tuyzTarUZH4HrCTU2JwC3wIXgAqAnCSIt'\n",
+        "    consumer_key = ''\n",
+        "    consumer_secret = ''\n",
+        "    access_token = ''\n",
+        "    access_token_secret = ''\n",
         "    try:\n",
         "      self.auth = OAuthHandler(consumer_key, consumer_secret)\n",
         "      self.auth.set_access_token(access_token, access_token_secret)\n",
@@ -186,8 +186,8 @@
       },
       "outputs": [
         {
-          "output_type": "stream",
           "name": "stdout",
+          "output_type": "stream",
           "text": [
             "Mounted at /content/drive\n"
           ]
@@ -221,81 +221,7 @@
       },
       "outputs": [
         {
-          "output_type": "execute_result",
           "data": {
-            "text/plain": [
-              "                            _type  \\\n",
-              "0  snscrape.modules.twitter.Tweet   \n",
-              "1  snscrape.modules.twitter.Tweet   \n",
-              "2  snscrape.modules.twitter.Tweet   \n",
-              "3  snscrape.modules.twitter.Tweet   \n",
-              "4  snscrape.modules.twitter.Tweet   \n",
-              "\n",
-              "                                                 url  \\\n",
-              "0  https://twitter.com/pat_ianni/status/150025982...   \n",
-              "1  https://twitter.com/luxeprogressive/status/150...   \n",
-              "2  https://twitter.com/spielblog/status/150025947...   \n",
-              "3  https://twitter.com/JumboSlunce/status/1500259...   \n",
-              "4  https://twitter.com/ronanmcmanus/status/150025...   \n",
-              "\n",
-              "                        date  \\\n",
-              "0  2022-03-05 23:59:50+00:00   \n",
-              "1  2022-03-05 23:59:05+00:00   \n",
-              "2  2022-03-05 23:58:26+00:00   \n",
-              "3  2022-03-05 23:58:20+00:00   \n",
-              "4  2022-03-05 23:58:17+00:00   \n",
-              "\n",
-              "                                             content  \\\n",
-              "0  JOE BIDEN SAYS HOW DO WE GET TO A PLACE WHERE ...   \n",
-              "1  @ProfPaulPoast He doesn’t have to like it but ...   \n",
-              "2  @SemproniusT @RichardHanania And if NATO is th...   \n",
-              "3  @jakehase @Groutandgo @MysticAura_ @SkylarJord...   \n",
-              "4  @2_4_5T_2_4_D @carolecadwalla @estellecostanza...   \n",
-              "\n",
-              "                                     renderedContent                   id  \\\n",
-              "0  JOE BIDEN SAYS HOW DO WE GET TO A PLACE WHERE ...  1500259827154505728   \n",
-              "1  @ProfPaulPoast He doesn’t have to like it but ...  1500259636863246336   \n",
-              "2  @SemproniusT @RichardHanania And if NATO is th...  1500259474040180738   \n",
-              "3  @jakehase @Groutandgo @MysticAura_ @SkylarJord...  1500259447742115841   \n",
-              "4  @2_4_5T_2_4_D @carolecadwalla @estellecostanza...  1500259435142340608   \n",
-              "\n",
-              "                                                user  replyCount  \\\n",
-              "0  {'_type': 'snscrape.modules.twitter.User', 'us...          14   \n",
-              "1  {'_type': 'snscrape.modules.twitter.User', 'us...           0   \n",
-              "2  {'_type': 'snscrape.modules.twitter.User', 'us...           1   \n",
-              "3  {'_type': 'snscrape.modules.twitter.User', 'us...           1   \n",
-              "4  {'_type': 'snscrape.modules.twitter.User', 'us...           0   \n",
-              "\n",
-              "   retweetCount  likeCount  ...  retweetedTweet  quotedTweet inReplyToTweetId  \\\n",
-              "0            26         99  ...             NaN          NaN              NaN   \n",
-              "1             0          2  ...             NaN          NaN     1.500259e+18   \n",
-              "2             0          0  ...             NaN          NaN     1.500259e+18   \n",
-              "3             0          0  ...             NaN          NaN     1.500248e+18   \n",
-              "4             0          0  ...             NaN          NaN     1.500258e+18   \n",
-              "\n",
-              "                                       inReplyToUser  \\\n",
-              "0                                                NaN   \n",
-              "1  {'_type': 'snscrape.modules.twitter.User', 'us...   \n",
-              "2  {'_type': 'snscrape.modules.twitter.User', 'us...   \n",
-              "3  {'_type': 'snscrape.modules.twitter.User', 'us...   \n",
-              "4  {'_type': 'snscrape.modules.twitter.User', 'us...   \n",
-              "\n",
-              "                                      mentionedUsers coordinates place  \\\n",
-              "0                                                NaN         NaN   NaN   \n",
-              "1  [{'_type': 'snscrape.modules.twitter.User', 'u...         NaN   NaN   \n",
-              "2  [{'_type': 'snscrape.modules.twitter.User', 'u...         NaN   NaN   \n",
-              "3  [{'_type': 'snscrape.modules.twitter.User', 'u...         NaN   NaN   \n",
-              "4  [{'_type': 'snscrape.modules.twitter.User', 'u...         NaN   NaN   \n",
-              "\n",
-              "  hashtags cashtags          Searh  \n",
-              "0      NaN      NaN  Russia invade  \n",
-              "1      NaN      NaN  Russia invade  \n",
-              "2      NaN      NaN  Russia invade  \n",
-              "3      NaN      NaN  Russia invade  \n",
-              "4      NaN      NaN  Russia invade  \n",
-              "\n",
-              "[5 rows x 29 columns]"
-            ],
             "text/html": [
               "\n",
               "  <div id=\"df-5bd91806-2315-4343-8cbc-725283c57cdf\">\n",
@@ -542,10 +468,84 @@
               "    </div>\n",
               "  </div>\n",
               "  "
+            ],
+            "text/plain": [
+              "                            _type  \\\n",
+              "0  snscrape.modules.twitter.Tweet   \n",
+              "1  snscrape.modules.twitter.Tweet   \n",
+              "2  snscrape.modules.twitter.Tweet   \n",
+              "3  snscrape.modules.twitter.Tweet   \n",
+              "4  snscrape.modules.twitter.Tweet   \n",
+              "\n",
+              "                                                 url  \\\n",
+              "0  https://twitter.com/pat_ianni/status/150025982...   \n",
+              "1  https://twitter.com/luxeprogressive/status/150...   \n",
+              "2  https://twitter.com/spielblog/status/150025947...   \n",
+              "3  https://twitter.com/JumboSlunce/status/1500259...   \n",
+              "4  https://twitter.com/ronanmcmanus/status/150025...   \n",
+              "\n",
+              "                        date  \\\n",
+              "0  2022-03-05 23:59:50+00:00   \n",
+              "1  2022-03-05 23:59:05+00:00   \n",
+              "2  2022-03-05 23:58:26+00:00   \n",
+              "3  2022-03-05 23:58:20+00:00   \n",
+              "4  2022-03-05 23:58:17+00:00   \n",
+              "\n",
+              "                                             content  \\\n",
+              "0  JOE BIDEN SAYS HOW DO WE GET TO A PLACE WHERE ...   \n",
+              "1  @ProfPaulPoast He doesn’t have to like it but ...   \n",
+              "2  @SemproniusT @RichardHanania And if NATO is th...   \n",
+              "3  @jakehase @Groutandgo @MysticAura_ @SkylarJord...   \n",
+              "4  @2_4_5T_2_4_D @carolecadwalla @estellecostanza...   \n",
+              "\n",
+              "                                     renderedContent                   id  \\\n",
+              "0  JOE BIDEN SAYS HOW DO WE GET TO A PLACE WHERE ...  1500259827154505728   \n",
+              "1  @ProfPaulPoast He doesn’t have to like it but ...  1500259636863246336   \n",
+              "2  @SemproniusT @RichardHanania And if NATO is th...  1500259474040180738   \n",
+              "3  @jakehase @Groutandgo @MysticAura_ @SkylarJord...  1500259447742115841   \n",
+              "4  @2_4_5T_2_4_D @carolecadwalla @estellecostanza...  1500259435142340608   \n",
+              "\n",
+              "                                                user  replyCount  \\\n",
+              "0  {'_type': 'snscrape.modules.twitter.User', 'us...          14   \n",
+              "1  {'_type': 'snscrape.modules.twitter.User', 'us...           0   \n",
+              "2  {'_type': 'snscrape.modules.twitter.User', 'us...           1   \n",
+              "3  {'_type': 'snscrape.modules.twitter.User', 'us...           1   \n",
+              "4  {'_type': 'snscrape.modules.twitter.User', 'us...           0   \n",
+              "\n",
+              "   retweetCount  likeCount  ...  retweetedTweet  quotedTweet inReplyToTweetId  \\\n",
+              "0            26         99  ...             NaN          NaN              NaN   \n",
+              "1             0          2  ...             NaN          NaN     1.500259e+18   \n",
+              "2             0          0  ...             NaN          NaN     1.500259e+18   \n",
+              "3             0          0  ...             NaN          NaN     1.500248e+18   \n",
+              "4             0          0  ...             NaN          NaN     1.500258e+18   \n",
+              "\n",
+              "                                       inReplyToUser  \\\n",
+              "0                                                NaN   \n",
+              "1  {'_type': 'snscrape.modules.twitter.User', 'us...   \n",
+              "2  {'_type': 'snscrape.modules.twitter.User', 'us...   \n",
+              "3  {'_type': 'snscrape.modules.twitter.User', 'us...   \n",
+              "4  {'_type': 'snscrape.modules.twitter.User', 'us...   \n",
+              "\n",
+              "                                      mentionedUsers coordinates place  \\\n",
+              "0                                                NaN         NaN   NaN   \n",
+              "1  [{'_type': 'snscrape.modules.twitter.User', 'u...         NaN   NaN   \n",
+              "2  [{'_type': 'snscrape.modules.twitter.User', 'u...         NaN   NaN   \n",
+              "3  [{'_type': 'snscrape.modules.twitter.User', 'u...         NaN   NaN   \n",
+              "4  [{'_type': 'snscrape.modules.twitter.User', 'u...         NaN   NaN   \n",
+              "\n",
+              "  hashtags cashtags          Searh  \n",
+              "0      NaN      NaN  Russia invade  \n",
+              "1      NaN      NaN  Russia invade  \n",
+              "2      NaN      NaN  Russia invade  \n",
+              "3      NaN      NaN  Russia invade  \n",
+              "4      NaN      NaN  Russia invade  \n",
+              "\n",
+              "[5 rows x 29 columns]"
             ]
           },
+          "execution_count": 5,
           "metadata": {},
-          "execution_count": 5
+          "output_type": "execute_result"
         }
       ],
       "source": [
@@ -589,15 +589,14 @@
       "cell_type": "code",
       "execution_count": null,
       "metadata": {
-        "id": "85ahseU-AlWF",
         "colab": {
           "base_uri": "https://localhost:8080/"
         },
+        "id": "85ahseU-AlWF",
         "outputId": "7dc1c188-b43d-4340-c66e-f77666b22579"
       },
       "outputs": [
         {
-          "output_type": "execute_result",
           "data": {
             "text/plain": [
               "0          True\n",
@@ -614,8 +613,9 @@
               "Length: 170835, dtype: bool"
             ]
           },
+          "execution_count": 9,
           "metadata": {},
-          "execution_count": 9
+          "output_type": "execute_result"
         }
       ],
       "source": [
@@ -646,14 +646,7 @@
       },
       "outputs": [
         {
-          "output_type": "execute_result",
           "data": {
-            "text/plain": [
-              "        index\n",
-              "0            \n",
-              "False   39301\n",
-              "True   131534"
-            ],
             "text/html": [
               "\n",
               "  <div id=\"df-82d3877e-13b6-48b2-a3c7-05b0a2985f45\">\n",
@@ -771,10 +764,17 @@
               "    </div>\n",
               "  </div>\n",
               "  "
+            ],
+            "text/plain": [
+              "        index\n",
+              "0            \n",
+              "False   39301\n",
+              "True   131534"
             ]
           },
+          "execution_count": 11,
           "metadata": {},
-          "execution_count": 11
+          "output_type": "execute_result"
         }
       ],
       "source": [
@@ -785,16 +785,16 @@
       "cell_type": "code",
       "execution_count": null,
       "metadata": {
-        "id": "5dBUXiPB7HOJ",
         "colab": {
           "base_uri": "https://localhost:8080/"
         },
+        "id": "5dBUXiPB7HOJ",
         "outputId": "803b55de-dc66-49fd-a446-6fad5ea77939"
       },
       "outputs": [
         {
-          "output_type": "stream",
           "name": "stderr",
+          "output_type": "stream",
           "text": [
             "/usr/local/lib/python3.7/dist-packages/ipykernel_launcher.py:1: FutureWarning: Passing a negative integer is deprecated in version 1.0 and will not be supported in future version. Instead, use None to not limit the column width.\n",
             "  \"\"\"Entry point for launching an IPython kernel.\n"
@@ -807,9 +807,7 @@
     },
     {
       "cell_type": "code",
-      "source": [
-        "content_df.iloc[170832]"
-      ],
+      "execution_count": null,
       "metadata": {
         "colab": {
           "base_uri": "https://localhost:8080/"
@@ -817,42 +815,44 @@
         "id": "-z5W9bXpEmuw",
         "outputId": "88932869-c544-4260-953e-263d36dd5a3c"
       },
-      "execution_count": null,
       "outputs": [
         {
-          "output_type": "execute_result",
           "data": {
             "text/plain": [
               "content    Yes! For sure. Standing up for America. He would never have left anyone in Afghanistan. Russia wouldn't invade...well anyone. No one would mess with Isreal. They would be too afraid of the firestorm that would rain down. https://t.co/FjmI9WG5ze\n",
               "Name: 170832, dtype: object"
             ]
           },
+          "execution_count": 13,
           "metadata": {},
-          "execution_count": 13
+          "output_type": "execute_result"
         }
+      ],
+      "source": [
+        "content_df.iloc[170832]"
       ]
     },
     {
       "cell_type": "code",
       "execution_count": null,
       "metadata": {
-        "id": "Kts85cok7p-i",
         "colab": {
           "base_uri": "https://localhost:8080/"
         },
+        "id": "Kts85cok7p-i",
         "outputId": "c95e82a3-f980-4cfb-d00f-a0a35692b68d"
       },
       "outputs": [
         {
-          "output_type": "execute_result",
           "data": {
             "text/plain": [
               "renderedContent    Yes! For sure. Standing up for America. He would never have left anyone in Afghanistan. Russia wouldn't invade...well anyone. No one would mess with Isreal. They would be too afraid of the firestorm that would rain down. twitter.com/SebGorka/statu…\n",
               "Name: 170832, dtype: object"
             ]
           },
+          "execution_count": 14,
           "metadata": {},
-          "execution_count": 14
+          "output_type": "execute_result"
         }
       ],
       "source": [
@@ -903,37 +903,7 @@
       },
       "outputs": [
         {
-          "output_type": "execute_result",
           "data": {
-            "text/plain": [
-              "                                                                                                                                                                                                                                                                                        renderedContent_x  \\\n",
-              "0       JOE BIDEN SAYS HOW DO WE GET TO A PLACE WHERE PUTIN DECIDES TO INVADE RUSSIA 🤣🤣🤣😭😭😂😂\\nPEOPLE VOTED FOR THIS GUY 🤣🤣🤣 https://t.co/FOHozS7vYI                                                                                                                                                         \n",
-              "1       @ProfPaulPoast He doesn’t have to like it but it’s up to those countries who are sovereign and now have a proven valid concern that he would invade again. Talk about “legitimate security concerns.” The only legitimate security concerns in this equation are from Ukraine/Russia’s neighbors.   \n",
-              "2       @SemproniusT @RichardHanania And if NATO is the aggressor then maybe Russia should declare war on NATO. That would be a hoot! Instead they decided to invade a weaker neighbor unprovoked, and they aren’t finding it to be as much fun as they thought.                                            \n",
-              "3       @jakehase @Groutandgo @MysticAura_ @SkylarJordan @AlexTyrrellPVQ Zelensky was not put in power by a coup. Ukraine doesn't want Russia in Ukraine. No one forced Russia to invade. Russia made a decision and now they're paying for it.                                                             \n",
-              "4       @2_4_5T_2_4_D @carolecadwalla @estellecostanza Or is your point that Ukraine asking NATO and the EU for help against Russia would have happened anyway (I mean, its not like Russia are going to invade Ukraine, right?)                                                                            \n",
-              "...                                                                                                                                                                                                                          ...                                                                            \n",
-              "170830  AS WE APPROACH 2022, PUTIN IS UNDER DOMESTIC PRESSURE, I THINK HE WILL INVADE UKRAINE,HE WILL PULL A JUNE 22ND, 1941 ( HITLER INVADING RUSSIA ! ) HOPING TO BUY TIME WE MAY HAVE A WW 3, HAPPY NEW YEAR PUTIN MAY GO BIOLOGICAL ALSO USING FOG OF WAR COVID 19 × 1000 IN POTENCY !                  \n",
-              "170831  Prediction for this year Russia will invade Ukraine in January China will invade Twain in late spring or summer and Covid will still be here this time next year.                                                                                                                                   \n",
-              "170832  Yes! For sure. Standing up for America. He would never have left anyone in Afghanistan. Russia wouldn't invade...well anyone. No one would mess with Isreal. They would be too afraid of the firestorm that would rain down. twitter.com/SebGorka/statu…                                            \n",
-              "170833  #Russia owns #Cuba and #Venezuela. #Putin wants to own #Ukraine. A KGB always a KGB. Putin is a dictator, and dictators invade, nobody questions because 'mysteriously\" had an accident. twitter.com/AlCardenasFL_D… https://t.co/WqjXgZfJxy                                                        \n",
-              "170834  @RALee85 No, Russia will go all the way. There is no partial solution to these. If they invade they will take all of Ukraine.\\n\\nBong                                                                                                                                                               \n",
-              "\n",
-              "                                  renderedContent_y  \n",
-              "0       (0.0, 0.0)                                   \n",
-              "1       (0.0, 1.0)                                   \n",
-              "2       (0.3, 0.2)                                   \n",
-              "3       (-0.30000000000000004, 0.2)                  \n",
-              "4       (-0.01339285714285715, 0.6116071428571428)   \n",
-              "...                                            ...   \n",
-              "170830  (0.3234848484848485, 0.5181818181818182)     \n",
-              "170831  (-0.15, 0.3)                                 \n",
-              "170832  (-0.08611111111111111, 0.45055555555555554)  \n",
-              "170833  (0.26666666666666666, 0.7000000000000001)    \n",
-              "170834  (0.05, 0.3)                                  \n",
-              "\n",
-              "[170835 rows x 2 columns]"
-            ],
             "text/html": [
               "\n",
               "  <div id=\"df-8a1ba597-7c5d-4ff8-bbd0-3d43e3c7a411\">\n",
@@ -1096,10 +1066,40 @@
               "    </div>\n",
               "  </div>\n",
               "  "
+            ],
+            "text/plain": [
+              "                                                                                                                                                                                                                                                                                        renderedContent_x  \\\n",
+              "0       JOE BIDEN SAYS HOW DO WE GET TO A PLACE WHERE PUTIN DECIDES TO INVADE RUSSIA 🤣🤣🤣😭😭😂😂\\nPEOPLE VOTED FOR THIS GUY 🤣🤣🤣 https://t.co/FOHozS7vYI                                                                                                                                                         \n",
+              "1       @ProfPaulPoast He doesn’t have to like it but it’s up to those countries who are sovereign and now have a proven valid concern that he would invade again. Talk about “legitimate security concerns.” The only legitimate security concerns in this equation are from Ukraine/Russia’s neighbors.   \n",
+              "2       @SemproniusT @RichardHanania And if NATO is the aggressor then maybe Russia should declare war on NATO. That would be a hoot! Instead they decided to invade a weaker neighbor unprovoked, and they aren’t finding it to be as much fun as they thought.                                            \n",
+              "3       @jakehase @Groutandgo @MysticAura_ @SkylarJordan @AlexTyrrellPVQ Zelensky was not put in power by a coup. Ukraine doesn't want Russia in Ukraine. No one forced Russia to invade. Russia made a decision and now they're paying for it.                                                             \n",
+              "4       @2_4_5T_2_4_D @carolecadwalla @estellecostanza Or is your point that Ukraine asking NATO and the EU for help against Russia would have happened anyway (I mean, its not like Russia are going to invade Ukraine, right?)                                                                            \n",
+              "...                                                                                                                                                                                                                          ...                                                                            \n",
+              "170830  AS WE APPROACH 2022, PUTIN IS UNDER DOMESTIC PRESSURE, I THINK HE WILL INVADE UKRAINE,HE WILL PULL A JUNE 22ND, 1941 ( HITLER INVADING RUSSIA ! ) HOPING TO BUY TIME WE MAY HAVE A WW 3, HAPPY NEW YEAR PUTIN MAY GO BIOLOGICAL ALSO USING FOG OF WAR COVID 19 × 1000 IN POTENCY !                  \n",
+              "170831  Prediction for this year Russia will invade Ukraine in January China will invade Twain in late spring or summer and Covid will still be here this time next year.                                                                                                                                   \n",
+              "170832  Yes! For sure. Standing up for America. He would never have left anyone in Afghanistan. Russia wouldn't invade...well anyone. No one would mess with Isreal. They would be too afraid of the firestorm that would rain down. twitter.com/SebGorka/statu…                                            \n",
+              "170833  #Russia owns #Cuba and #Venezuela. #Putin wants to own #Ukraine. A KGB always a KGB. Putin is a dictator, and dictators invade, nobody questions because 'mysteriously\" had an accident. twitter.com/AlCardenasFL_D… https://t.co/WqjXgZfJxy                                                        \n",
+              "170834  @RALee85 No, Russia will go all the way. There is no partial solution to these. If they invade they will take all of Ukraine.\\n\\nBong                                                                                                                                                               \n",
+              "\n",
+              "                                  renderedContent_y  \n",
+              "0       (0.0, 0.0)                                   \n",
+              "1       (0.0, 1.0)                                   \n",
+              "2       (0.3, 0.2)                                   \n",
+              "3       (-0.30000000000000004, 0.2)                  \n",
+              "4       (-0.01339285714285715, 0.6116071428571428)   \n",
+              "...                                            ...   \n",
+              "170830  (0.3234848484848485, 0.5181818181818182)     \n",
+              "170831  (-0.15, 0.3)                                 \n",
+              "170832  (-0.08611111111111111, 0.45055555555555554)  \n",
+              "170833  (0.26666666666666666, 0.7000000000000001)    \n",
+              "170834  (0.05, 0.3)                                  \n",
+              "\n",
+              "[170835 rows x 2 columns]"
             ]
           },
+          "execution_count": 17,
           "metadata": {},
-          "execution_count": 17
+          "output_type": "execute_result"
         }
       ],
       "source": [
@@ -1148,24 +1148,7 @@
       },
       "outputs": [
         {
-          "output_type": "execute_result",
           "data": {
-            "text/plain": [
-              "         index         0\n",
-              "0       0       neutral \n",
-              "1       1       neutral \n",
-              "2       2       positive\n",
-              "3       3       negative\n",
-              "4       4       negative\n",
-              "...    ..            ...\n",
-              "170830  170830  positive\n",
-              "170831  170831  negative\n",
-              "170832  170832  negative\n",
-              "170833  170833  positive\n",
-              "170834  170834  positive\n",
-              "\n",
-              "[170835 rows x 2 columns]"
-            ],
             "text/html": [
               "\n",
               "  <div id=\"df-1ca9bc9a-5ef1-44ca-ab30-1efc47286bd8\">\n",
@@ -1328,10 +1311,27 @@
               "    </div>\n",
               "  </div>\n",
               "  "
+            ],
+            "text/plain": [
+              "         index         0\n",
+              "0       0       neutral \n",
+              "1       1       neutral \n",
+              "2       2       positive\n",
+              "3       3       negative\n",
+              "4       4       negative\n",
+              "...    ..            ...\n",
+              "170830  170830  positive\n",
+              "170831  170831  negative\n",
+              "170832  170832  negative\n",
+              "170833  170833  positive\n",
+              "170834  170834  positive\n",
+              "\n",
+              "[170835 rows x 2 columns]"
             ]
           },
+          "execution_count": 20,
           "metadata": {},
-          "execution_count": 20
+          "output_type": "execute_result"
         }
       ],
       "source": [
@@ -1362,23 +1362,7 @@
       },
       "outputs": [
         {
-          "output_type": "execute_result",
           "data": {
-            "text/plain": [
-              "                                                                                                                                                                                                                                                                                   renderedContent_x  \\\n",
-              "0  JOE BIDEN SAYS HOW DO WE GET TO A PLACE WHERE PUTIN DECIDES TO INVADE RUSSIA 🤣🤣🤣😭😭😂😂\\nPEOPLE VOTED FOR THIS GUY 🤣🤣🤣 https://t.co/FOHozS7vYI                                                                                                                                                         \n",
-              "1  @ProfPaulPoast He doesn’t have to like it but it’s up to those countries who are sovereign and now have a proven valid concern that he would invade again. Talk about “legitimate security concerns.” The only legitimate security concerns in this equation are from Ukraine/Russia’s neighbors.   \n",
-              "2  @SemproniusT @RichardHanania And if NATO is the aggressor then maybe Russia should declare war on NATO. That would be a hoot! Instead they decided to invade a weaker neighbor unprovoked, and they aren’t finding it to be as much fun as they thought.                                            \n",
-              "3  @jakehase @Groutandgo @MysticAura_ @SkylarJordan @AlexTyrrellPVQ Zelensky was not put in power by a coup. Ukraine doesn't want Russia in Ukraine. No one forced Russia to invade. Russia made a decision and now they're paying for it.                                                             \n",
-              "4  @2_4_5T_2_4_D @carolecadwalla @estellecostanza Or is your point that Ukraine asking NATO and the EU for help against Russia would have happened anyway (I mean, its not like Russia are going to invade Ukraine, right?)                                                                            \n",
-              "\n",
-              "                            renderedContent_y Sentiment  \n",
-              "0  (0.0, 0.0)                                  neutral   \n",
-              "1  (0.0, 1.0)                                  neutral   \n",
-              "2  (0.3, 0.2)                                  positive  \n",
-              "3  (-0.30000000000000004, 0.2)                 negative  \n",
-              "4  (-0.01339285714285715, 0.6116071428571428)  negative  "
-            ],
             "text/html": [
               "\n",
               "  <div id=\"df-34675b1b-3278-40c8-ab30-26017fef54da\">\n",
@@ -1516,10 +1500,26 @@
               "    </div>\n",
               "  </div>\n",
               "  "
+            ],
+            "text/plain": [
+              "                                                                                                                                                                                                                                                                                   renderedContent_x  \\\n",
+              "0  JOE BIDEN SAYS HOW DO WE GET TO A PLACE WHERE PUTIN DECIDES TO INVADE RUSSIA 🤣🤣🤣😭😭😂😂\\nPEOPLE VOTED FOR THIS GUY 🤣🤣🤣 https://t.co/FOHozS7vYI                                                                                                                                                         \n",
+              "1  @ProfPaulPoast He doesn’t have to like it but it’s up to those countries who are sovereign and now have a proven valid concern that he would invade again. Talk about “legitimate security concerns.” The only legitimate security concerns in this equation are from Ukraine/Russia’s neighbors.   \n",
+              "2  @SemproniusT @RichardHanania And if NATO is the aggressor then maybe Russia should declare war on NATO. That would be a hoot! Instead they decided to invade a weaker neighbor unprovoked, and they aren’t finding it to be as much fun as they thought.                                            \n",
+              "3  @jakehase @Groutandgo @MysticAura_ @SkylarJordan @AlexTyrrellPVQ Zelensky was not put in power by a coup. Ukraine doesn't want Russia in Ukraine. No one forced Russia to invade. Russia made a decision and now they're paying for it.                                                             \n",
+              "4  @2_4_5T_2_4_D @carolecadwalla @estellecostanza Or is your point that Ukraine asking NATO and the EU for help against Russia would have happened anyway (I mean, its not like Russia are going to invade Ukraine, right?)                                                                            \n",
+              "\n",
+              "                            renderedContent_y Sentiment  \n",
+              "0  (0.0, 0.0)                                  neutral   \n",
+              "1  (0.0, 1.0)                                  neutral   \n",
+              "2  (0.3, 0.2)                                  positive  \n",
+              "3  (-0.30000000000000004, 0.2)                 negative  \n",
+              "4  (-0.01339285714285715, 0.6116071428571428)  negative  "
             ]
           },
+          "execution_count": 22,
           "metadata": {},
-          "execution_count": 22
+          "output_type": "execute_result"
         }
       ],
       "source": [
@@ -1572,8 +1572,8 @@
       },
       "outputs": [
         {
-          "output_type": "stream",
           "name": "stderr",
+          "output_type": "stream",
           "text": [
             "/usr/local/lib/python3.7/dist-packages/IPython/core/interactiveshell.py:2882: DtypeWarning: Columns (0,1,2,3) have mixed types.Specify dtype option on import or set low_memory=False.\n",
             "  exec(code_obj, self.user_global_ns, self.user_ns)\n"
@@ -1608,23 +1608,7 @@
       },
       "outputs": [
         {
-          "output_type": "execute_result",
           "data": {
-            "text/plain": [
-              "                                                                                                                                                                                                                                                                                              Tweets  \\\n",
-              "0  JOE BIDEN SAYS HOW DO WE GET TO A PLACE WHERE PUTIN DECIDES TO INVADE RUSSIA 🤣🤣🤣😭😭😂😂\\nPEOPLE VOTED FOR THIS GUY 🤣🤣🤣 https://t.co/FOHozS7vYI                                                                                                                                                         \n",
-              "1  @ProfPaulPoast He doesn’t have to like it but it’s up to those countries who are sovereign and now have a proven valid concern that he would invade again. Talk about “legitimate security concerns.” The only legitimate security concerns in this equation are from Ukraine/Russia’s neighbors.   \n",
-              "2  @SemproniusT @RichardHanania And if NATO is the aggressor then maybe Russia should declare war on NATO. That would be a hoot! Instead they decided to invade a weaker neighbor unprovoked, and they aren’t finding it to be as much fun as they thought.                                            \n",
-              "3  @jakehase @Groutandgo @MysticAura_ @SkylarJordan @AlexTyrrellPVQ Zelensky was not put in power by a coup. Ukraine doesn't want Russia in Ukraine. No one forced Russia to invade. Russia made a decision and now they're paying for it.                                                             \n",
-              "4  @2_4_5T_2_4_D @carolecadwalla @estellecostanza Or is your point that Ukraine asking NATO and the EU for help against Russia would have happened anyway (I mean, its not like Russia are going to invade Ukraine, right?)                                                                            \n",
-              "\n",
-              "  Sentiment  \n",
-              "0  neutral   \n",
-              "1  neutral   \n",
-              "2  positive  \n",
-              "3  negative  \n",
-              "4  negative  "
-            ],
             "text/html": [
               "\n",
               "  <div id=\"df-0cc6e5d7-9c38-46bd-83de-b33d51da62db\">\n",
@@ -1756,10 +1740,26 @@
               "    </div>\n",
               "  </div>\n",
               "  "
+            ],
+            "text/plain": [
+              "                                                                                                                                                                                                                                                                                              Tweets  \\\n",
+              "0  JOE BIDEN SAYS HOW DO WE GET TO A PLACE WHERE PUTIN DECIDES TO INVADE RUSSIA 🤣🤣🤣😭😭😂😂\\nPEOPLE VOTED FOR THIS GUY 🤣🤣🤣 https://t.co/FOHozS7vYI                                                                                                                                                         \n",
+              "1  @ProfPaulPoast He doesn’t have to like it but it’s up to those countries who are sovereign and now have a proven valid concern that he would invade again. Talk about “legitimate security concerns.” The only legitimate security concerns in this equation are from Ukraine/Russia’s neighbors.   \n",
+              "2  @SemproniusT @RichardHanania And if NATO is the aggressor then maybe Russia should declare war on NATO. That would be a hoot! Instead they decided to invade a weaker neighbor unprovoked, and they aren’t finding it to be as much fun as they thought.                                            \n",
+              "3  @jakehase @Groutandgo @MysticAura_ @SkylarJordan @AlexTyrrellPVQ Zelensky was not put in power by a coup. Ukraine doesn't want Russia in Ukraine. No one forced Russia to invade. Russia made a decision and now they're paying for it.                                                             \n",
+              "4  @2_4_5T_2_4_D @carolecadwalla @estellecostanza Or is your point that Ukraine asking NATO and the EU for help against Russia would have happened anyway (I mean, its not like Russia are going to invade Ukraine, right?)                                                                            \n",
+              "\n",
+              "  Sentiment  \n",
+              "0  neutral   \n",
+              "1  neutral   \n",
+              "2  positive  \n",
+              "3  negative  \n",
+              "4  negative  "
             ]
           },
+          "execution_count": 27,
           "metadata": {},
-          "execution_count": 27
+          "output_type": "execute_result"
         }
       ],
       "source": [
@@ -1778,8 +1778,8 @@
       },
       "outputs": [
         {
-          "output_type": "stream",
           "name": "stdout",
+          "output_type": "stream",
           "text": [
             "Posiive 66162\n",
             "Negative 45904\n",
@@ -1808,14 +1808,14 @@
       },
       "outputs": [
         {
-          "output_type": "execute_result",
           "data": {
             "text/plain": [
               "170831"
             ]
           },
+          "execution_count": 29,
           "metadata": {},
-          "execution_count": 29
+          "output_type": "execute_result"
         }
       ],
       "source": [
@@ -1836,23 +1836,7 @@
       },
       "outputs": [
         {
-          "output_type": "execute_result",
           "data": {
-            "text/plain": [
-              "                                                                                                                                                                                                                                                                                                                                                                                                                                                          Tweets  \\\n",
-              "2   @SemproniusT @RichardHanania And if NATO is the aggressor then maybe Russia should declare war on NATO. That would be a hoot! Instead they decided to invade a weaker neighbor unprovoked, and they aren’t finding it to be as much fun as they thought.                                                                                                                                                                                                       \n",
-              "8   @RussianEmbassy @OlafScholz @KremlinRussia_E @mfa_russia @RusBotschaft @GermanEmbassy @BBCWorld @ftworldnews @guardianworld @TelegraphWorld @REESOxford @MailOnline Main threat in Ukraine is your agression. It's a shame that prosecuting and killing his own citizens was not enough for Putin, so he decided to invade and kill Ukrainians. The only hope is that one day he will face his own Nuremberg, for Politkovskaya, for Nemtsov, for Ukrainians   \n",
-              "14  @Resist47231614 @laurenboebert Brilliant, \"Ukraine is a country in Europe. It exists next to another country called Russia. Russia is a bigger country. Russia is a powerful country. Russia decided to invade a smaller country called Ukraine. So basically, that’s wrong,”                                                                                                                                                                                  \n",
-              "15  Allows Russia to invade Ukraine through weakness\\nCauses inflation to climb uncontrollably by distroying our energy independence\\nWon't secure our borders while saying that Ukraines borders are important\\n\\nDo I  support Trump easy answer is\\nYES                                                                                                                                                                                                         \n",
-              "18  @Khaledwasel74x @spectatorindex This is about punishing Russia economically to the point that it is no longer capable of funding its military and thus can't further invade Europe in the future. They have a lot of nukes so direct military intervention is off the table. If we could blow their shit up we would.                                                                                                                                          \n",
-              "\n",
-              "   Sentiment  \n",
-              "2   positive  \n",
-              "8   positive  \n",
-              "14  positive  \n",
-              "15  positive  \n",
-              "18  positive  "
-            ],
             "text/html": [
               "\n",
               "  <div id=\"df-08b393c1-f325-4f5b-a7fc-b5220387c51a\">\n",
@@ -1984,10 +1968,26 @@
               "    </div>\n",
               "  </div>\n",
               "  "
+            ],
+            "text/plain": [
+              "                                                                                                                                                                                                                                                                                                                                                                                                                                                          Tweets  \\\n",
+              "2   @SemproniusT @RichardHanania And if NATO is the aggressor then maybe Russia should declare war on NATO. That would be a hoot! Instead they decided to invade a weaker neighbor unprovoked, and they aren’t finding it to be as much fun as they thought.                                                                                                                                                                                                       \n",
+              "8   @RussianEmbassy @OlafScholz @KremlinRussia_E @mfa_russia @RusBotschaft @GermanEmbassy @BBCWorld @ftworldnews @guardianworld @TelegraphWorld @REESOxford @MailOnline Main threat in Ukraine is your agression. It's a shame that prosecuting and killing his own citizens was not enough for Putin, so he decided to invade and kill Ukrainians. The only hope is that one day he will face his own Nuremberg, for Politkovskaya, for Nemtsov, for Ukrainians   \n",
+              "14  @Resist47231614 @laurenboebert Brilliant, \"Ukraine is a country in Europe. It exists next to another country called Russia. Russia is a bigger country. Russia is a powerful country. Russia decided to invade a smaller country called Ukraine. So basically, that’s wrong,”                                                                                                                                                                                  \n",
+              "15  Allows Russia to invade Ukraine through weakness\\nCauses inflation to climb uncontrollably by distroying our energy independence\\nWon't secure our borders while saying that Ukraines borders are important\\n\\nDo I  support Trump easy answer is\\nYES                                                                                                                                                                                                         \n",
+              "18  @Khaledwasel74x @spectatorindex This is about punishing Russia economically to the point that it is no longer capable of funding its military and thus can't further invade Europe in the future. They have a lot of nukes so direct military intervention is off the table. If we could blow their shit up we would.                                                                                                                                          \n",
+              "\n",
+              "   Sentiment  \n",
+              "2   positive  \n",
+              "8   positive  \n",
+              "14  positive  \n",
+              "15  positive  \n",
+              "18  positive  "
             ]
           },
+          "execution_count": 30,
           "metadata": {},
-          "execution_count": 30
+          "output_type": "execute_result"
         }
       ],
       "source": [
@@ -2036,8 +2036,8 @@
       },
       "outputs": [
         {
-          "output_type": "stream",
           "name": "stdout",
+          "output_type": "stream",
           "text": [
             "[('@SemproniusT', 'NN'), ('@RichardHanania', 'NN'), ('And', 'CC'), ('if', 'IN'), ('NATO', 'NNP'), ('is', 'VBZ'), ('the', 'DT'), ('aggressor', 'NN'), ('then', 'RB'), ('maybe', 'RB'), ('Russia', 'NNP'), ('should', 'MD'), ('declare', 'VB'), ('war', 'NN'), ('on', 'IN'), ('NATO', 'NNP'), ('.', '.'), ('That', 'DT'), ('would', 'MD'), ('be', 'VB'), ('a', 'DT'), ('hoot', 'NN'), ('!', '.'), ('Instead', 'RB'), ('they', 'PRP'), ('decided', 'VBD'), ('to', 'TO'), ('invade', 'VB'), ('a', 'DT'), ('weaker', 'JJR'), ('neighbor', 'NN'), ('unprovoked', 'VBD'), (',', ','), ('and', 'CC'), ('they', 'PRP'), ('aren', 'VBP'), ('’', 'JJ'), ('t', 'NN'), ('finding', 'VBG'), ('it', 'PRP'), ('to', 'TO'), ('be', 'VB'), ('as', 'RB'), ('much', 'JJ'), ('fun', 'NN'), ('as', 'IN'), ('they', 'PRP'), ('thought', 'VBD'), ('.', '.')]\n"
           ]
@@ -2060,8 +2060,8 @@
       },
       "outputs": [
         {
-          "output_type": "stream",
           "name": "stdout",
+          "output_type": "stream",
           "text": [
             "['@SemproniusT', '@RichardHanania', 'And', 'if', 'NATO', 'be', 'the', 'aggressor', 'then', 'maybe', 'Russia', 'should', 'declare', 'war', 'on', 'NATO', '.', 'That', 'would', 'be', 'a', 'hoot', '!', 'Instead', 'they', 'decide', 'to', 'invade', 'a', 'weak', 'neighbor', 'unprovoked', ',', 'and', 'they', 'aren', '’', 't', 'find', 'it', 'to', 'be', 'as', 'much', 'fun', 'as', 'they', 'think', '.']\n"
           ]
@@ -2180,8 +2180,8 @@
       },
       "outputs": [
         {
-          "output_type": "stream",
           "name": "stdout",
+          "output_type": "stream",
           "text": [
             "['nato', 'aggressor', 'maybe', 'russia', 'declare', 'war', 'nato', 'would', 'hoot', 'instead', 'decide', 'invade', 'weak', 'neighbor', 'unprovoked', 'find', 'much', 'fun', 'think']\n"
           ]
@@ -2196,15 +2196,14 @@
       "cell_type": "code",
       "execution_count": null,
       "metadata": {
-        "id": "C0pC5D2L5Yzp",
         "colab": {
           "base_uri": "https://localhost:8080/"
         },
+        "id": "C0pC5D2L5Yzp",
         "outputId": "e00e1efa-b125-4ea2-a41d-538efda98a20"
       },
       "outputs": [
         {
-          "output_type": "execute_result",
           "data": {
             "text/plain": [
               "[({'aggressor': True,\n",
@@ -2312,8 +2311,9 @@
               "  1)]"
             ]
           },
+          "execution_count": 37,
           "metadata": {},
-          "execution_count": 37
+          "output_type": "execute_result"
         }
       ],
       "source": [
@@ -2381,9 +2381,7 @@
     },
     {
       "cell_type": "code",
-      "source": [
-        "nbc2"
-      ],
+      "execution_count": null,
       "metadata": {
         "colab": {
           "base_uri": "https://localhost:8080/",
@@ -2392,53 +2390,9 @@
         "id": "HYYJwP5uCjyr",
         "outputId": "66abea10-9fa4-4979-c5a2-881cccba4587"
       },
-      "execution_count": null,
       "outputs": [
         {
-          "output_type": "execute_result",
           "data": {
-            "text/plain": [
-              "    Unnamed: 0  \\\n",
-              "0   0            \n",
-              "1   1            \n",
-              "2   2            \n",
-              "3   3            \n",
-              "4   4            \n",
-              ".. ..            \n",
-              "69  69           \n",
-              "70  70           \n",
-              "71  71           \n",
-              "72  72           \n",
-              "73  73           \n",
-              "\n",
-              "                                                                                                                                                text  \\\n",
-              "0   @KremlinRussia_E President Putin of  russia  is  on right path in ukraine war . We are with you  .                                                 \n",
-              "1   RT @Liberty4Ever1: Russia spending an estimated $900 million a day on Ukraine war https://t.co/ldm04I9K55 The problem is Russia rakes in ab…       \n",
-              "2   As bombs fall on Ukraine, many European governments are waking up to the sorry state of their own civil defenses. https://t.co/4oOJThCACp          \n",
-              "3   RT @washingtonpost: A tremendous surge in VPN downloads in Russia represents a challenge to Putin and his version of the Ukraine war. \\nhttp…      \n",
-              "4   RT @SpencerGuard: There is only a few hours to Russia's “Victory Day” parade &amp; Putin's speech (noon in Moscow). There can only be lies. Put…   \n",
-              "..                                                                                                                                               ...   \n",
-              "69  @JuliaDavisNews @amagickeagle999 The Great Patriotic War has been redefined inside Russia with scant mention of the… https://t.co/3XlBlkExpA       \n",
-              "70  RT @ForeignPolicy: Switzerland is less exposed than the Nordic countries are to Russian influence. But it, too, feels the need to move more…       \n",
-              "71  https://t.co/4Sc0mY2nu5                                                                                                                            \n",
-              "72  RT @AP: In Romania, Jill Biden heard heartbreaking stories from Ukrainian women who fled Russia’s war and found safe haven across the borde…       \n",
-              "73  RT @MaximeBernier: The longer this war lasts, the more disastrous consequences it has on Ukrainians and the whole world, especially food sh…       \n",
-              "\n",
-              "   sentiment  \n",
-              "0   positive  \n",
-              "1   neutral   \n",
-              "2   positive  \n",
-              "3   positive  \n",
-              "4   negative  \n",
-              "..       ...  \n",
-              "69  positive  \n",
-              "70  positive  \n",
-              "71  neutral   \n",
-              "72  positive  \n",
-              "73  positive  \n",
-              "\n",
-              "[74 rows x 3 columns]"
-            ],
             "text/html": [
               "\n",
               "  <div id=\"df-6bcca1b3-1f61-4590-95a0-4fa94569ab35\">\n",
@@ -2613,38 +2567,84 @@
               "    </div>\n",
               "  </div>\n",
               "  "
+            ],
+            "text/plain": [
+              "    Unnamed: 0  \\\n",
+              "0   0            \n",
+              "1   1            \n",
+              "2   2            \n",
+              "3   3            \n",
+              "4   4            \n",
+              ".. ..            \n",
+              "69  69           \n",
+              "70  70           \n",
+              "71  71           \n",
+              "72  72           \n",
+              "73  73           \n",
+              "\n",
+              "                                                                                                                                                text  \\\n",
+              "0   @KremlinRussia_E President Putin of  russia  is  on right path in ukraine war . We are with you  .                                                 \n",
+              "1   RT @Liberty4Ever1: Russia spending an estimated $900 million a day on Ukraine war https://t.co/ldm04I9K55 The problem is Russia rakes in ab…       \n",
+              "2   As bombs fall on Ukraine, many European governments are waking up to the sorry state of their own civil defenses. https://t.co/4oOJThCACp          \n",
+              "3   RT @washingtonpost: A tremendous surge in VPN downloads in Russia represents a challenge to Putin and his version of the Ukraine war. \\nhttp…      \n",
+              "4   RT @SpencerGuard: There is only a few hours to Russia's “Victory Day” parade &amp; Putin's speech (noon in Moscow). There can only be lies. Put…   \n",
+              "..                                                                                                                                               ...   \n",
+              "69  @JuliaDavisNews @amagickeagle999 The Great Patriotic War has been redefined inside Russia with scant mention of the… https://t.co/3XlBlkExpA       \n",
+              "70  RT @ForeignPolicy: Switzerland is less exposed than the Nordic countries are to Russian influence. But it, too, feels the need to move more…       \n",
+              "71  https://t.co/4Sc0mY2nu5                                                                                                                            \n",
+              "72  RT @AP: In Romania, Jill Biden heard heartbreaking stories from Ukrainian women who fled Russia’s war and found safe haven across the borde…       \n",
+              "73  RT @MaximeBernier: The longer this war lasts, the more disastrous consequences it has on Ukrainians and the whole world, especially food sh…       \n",
+              "\n",
+              "   sentiment  \n",
+              "0   positive  \n",
+              "1   neutral   \n",
+              "2   positive  \n",
+              "3   positive  \n",
+              "4   negative  \n",
+              "..       ...  \n",
+              "69  positive  \n",
+              "70  positive  \n",
+              "71  neutral   \n",
+              "72  positive  \n",
+              "73  positive  \n",
+              "\n",
+              "[74 rows x 3 columns]"
             ]
           },
+          "execution_count": 40,
           "metadata": {},
-          "execution_count": 40
+          "output_type": "execute_result"
         }
+      ],
+      "source": [
+        "nbc2"
       ]
     },
     {
       "cell_type": "code",
-      "source": [
-        "nbc2= nbc2.drop(['Unnamed: 0'],axis=1)"
-      ],
+      "execution_count": null,
       "metadata": {
         "id": "aTuLpL_yEDQ-"
       },
-      "execution_count": null,
-      "outputs": []
+      "outputs": [],
+      "source": [
+        "nbc2= nbc2.drop(['Unnamed: 0'],axis=1)"
+      ]
     },
     {
       "cell_type": "code",
       "execution_count": null,
       "metadata": {
-        "id": "NsdD3x9vANY1",
         "colab": {
           "base_uri": "https://localhost:8080/"
         },
+        "id": "NsdD3x9vANY1",
         "outputId": "68b435a0-59fa-4bf0-dae0-96a30eb84140"
       },
       "outputs": [
         {
-          "output_type": "stream",
           "name": "stdout",
+          "output_type": "stream",
           "text": [
             "Posiive 23\n",
             "Negative 18\n",
@@ -2665,22 +2665,22 @@
       "cell_type": "code",
       "execution_count": null,
       "metadata": {
-        "id": "HCd8yOmKANY5",
         "colab": {
           "base_uri": "https://localhost:8080/"
         },
+        "id": "HCd8yOmKANY5",
         "outputId": "c7477b64-6183-47b4-9a75-a5c23cfd9539"
       },
       "outputs": [
         {
-          "output_type": "execute_result",
           "data": {
             "text/plain": [
               "74"
             ]
           },
+          "execution_count": 43,
           "metadata": {},
-          "execution_count": 43
+          "output_type": "execute_result"
         }
       ],
       "source": [
@@ -2692,46 +2692,16 @@
       "cell_type": "code",
       "execution_count": null,
       "metadata": {
-        "id": "QPxFEapNANY7",
         "colab": {
           "base_uri": "https://localhost:8080/",
           "height": 537
         },
+        "id": "QPxFEapNANY7",
         "outputId": "0934e5d7-2c89-4c06-e678-972066505e3e"
       },
       "outputs": [
         {
-          "output_type": "execute_result",
           "data": {
-            "text/plain": [
-              "                                                                                                                                             text  \\\n",
-              "0   @KremlinRussia_E President Putin of  russia  is  on right path in ukraine war . We are with you  .                                              \n",
-              "2   As bombs fall on Ukraine, many European governments are waking up to the sorry state of their own civil defenses. https://t.co/4oOJThCACp       \n",
-              "3   RT @washingtonpost: A tremendous surge in VPN downloads in Russia represents a challenge to Putin and his version of the Ukraine war. \\nhttp…   \n",
-              "11  @russelljh @FAO_Peripateric @jeffreymparsons @Abulinixish @RT_com If Putin really wanted a war 😂 he would have done… https://t.co/SJLO4H1sZ5    \n",
-              "12  RT @katierogers: “We understand what it takes for the U.S. First Lady to come here during a war, where the military actions are taking plac…    \n",
-              "..                                                                                                                                           ...    \n",
-              "61  Bloodbath on the #WallStreet tomorrow?\\n#Bitcoin #Stocks #stockmarketcrash #economy #war #Russia #Ukraine #Oil… https://t.co/bkZNRrY44l         \n",
-              "62  Independent journalists changing the Russia-Ukraine War narrative. Where is the truth? https://t.co/QG0PpYNVKu                                  \n",
-              "66  RT @vadeboncoeur_m: Les Pro Trump qui sont devenus \"évidemment\" des pro Putin.... Donc ça c'est correcte ? Belle gang de \"moutons\" !!!\\nSi T…   \n",
-              "67  @TheLumpenprole @theDoc8311 @LPNH War means civilian casualties. Guilt for the killing of civilians in the Donbass… https://t.co/vcaD2LsWps     \n",
-              "71  https://t.co/4Sc0mY2nu5                                                                                                                         \n",
-              "\n",
-              "   sentiment  \n",
-              "0   positive  \n",
-              "2   positive  \n",
-              "3   positive  \n",
-              "11  positive  \n",
-              "12  positive  \n",
-              "..       ...  \n",
-              "61  neutral   \n",
-              "62  neutral   \n",
-              "66  neutral   \n",
-              "67  neutral   \n",
-              "71  neutral   \n",
-              "\n",
-              "[74 rows x 2 columns]"
-            ],
             "text/html": [
               "\n",
               "  <div id=\"df-21562a1f-36a2-4574-9484-ee4a464ad3ed\">\n",
@@ -2894,10 +2864,40 @@
               "    </div>\n",
               "  </div>\n",
               "  "
+            ],
+            "text/plain": [
+              "                                                                                                                                             text  \\\n",
+              "0   @KremlinRussia_E President Putin of  russia  is  on right path in ukraine war . We are with you  .                                              \n",
+              "2   As bombs fall on Ukraine, many European governments are waking up to the sorry state of their own civil defenses. https://t.co/4oOJThCACp       \n",
+              "3   RT @washingtonpost: A tremendous surge in VPN downloads in Russia represents a challenge to Putin and his version of the Ukraine war. \\nhttp…   \n",
+              "11  @russelljh @FAO_Peripateric @jeffreymparsons @Abulinixish @RT_com If Putin really wanted a war 😂 he would have done… https://t.co/SJLO4H1sZ5    \n",
+              "12  RT @katierogers: “We understand what it takes for the U.S. First Lady to come here during a war, where the military actions are taking plac…    \n",
+              "..                                                                                                                                           ...    \n",
+              "61  Bloodbath on the #WallStreet tomorrow?\\n#Bitcoin #Stocks #stockmarketcrash #economy #war #Russia #Ukraine #Oil… https://t.co/bkZNRrY44l         \n",
+              "62  Independent journalists changing the Russia-Ukraine War narrative. Where is the truth? https://t.co/QG0PpYNVKu                                  \n",
+              "66  RT @vadeboncoeur_m: Les Pro Trump qui sont devenus \"évidemment\" des pro Putin.... Donc ça c'est correcte ? Belle gang de \"moutons\" !!!\\nSi T…   \n",
+              "67  @TheLumpenprole @theDoc8311 @LPNH War means civilian casualties. Guilt for the killing of civilians in the Donbass… https://t.co/vcaD2LsWps     \n",
+              "71  https://t.co/4Sc0mY2nu5                                                                                                                         \n",
+              "\n",
+              "   sentiment  \n",
+              "0   positive  \n",
+              "2   positive  \n",
+              "3   positive  \n",
+              "11  positive  \n",
+              "12  positive  \n",
+              "..       ...  \n",
+              "61  neutral   \n",
+              "62  neutral   \n",
+              "66  neutral   \n",
+              "67  neutral   \n",
+              "71  neutral   \n",
+              "\n",
+              "[74 rows x 2 columns]"
             ]
           },
+          "execution_count": 44,
           "metadata": {},
-          "execution_count": 44
+          "output_type": "execute_result"
         }
       ],
       "source": [
@@ -2936,20 +2936,16 @@
     },
     {
       "cell_type": "code",
-      "source": [
-        "data2"
-      ],
+      "execution_count": null,
       "metadata": {
-        "id": "rLkpXbMrF3Fb",
         "colab": {
           "base_uri": "https://localhost:8080/"
         },
+        "id": "rLkpXbMrF3Fb",
         "outputId": "f046b893-b72b-422e-ed23-31fa4c5c2253"
       },
-      "execution_count": null,
       "outputs": [
         {
-          "output_type": "execute_result",
           "data": {
             "text/plain": [
               "[(['@KremlinRussia_E',\n",
@@ -4765,25 +4761,29 @@
               " (['https://t.co/4Sc0mY2nu5'], 0.5)]"
             ]
           },
+          "execution_count": 46,
           "metadata": {},
-          "execution_count": 46
+          "output_type": "execute_result"
         }
+      ],
+      "source": [
+        "data2"
       ]
     },
     {
       "cell_type": "code",
       "execution_count": null,
       "metadata": {
-        "id": "xH-FHLYEANY9",
         "colab": {
           "base_uri": "https://localhost:8080/"
         },
+        "id": "xH-FHLYEANY9",
         "outputId": "12378d66-91c1-412b-dad7-8b5a5c83ef89"
       },
       "outputs": [
         {
-          "output_type": "stream",
           "name": "stdout",
+          "output_type": "stream",
           "text": [
             "[('@KremlinRussia_E', 'JJ'), ('President', 'NNP'), ('Putin', 'NNP'), ('of', 'IN'), ('russia', 'NN'), ('is', 'VBZ'), ('on', 'IN'), ('right', 'JJ'), ('path', 'NN'), ('in', 'IN'), ('ukraine', 'JJ'), ('war', 'NN'), ('.', '.'), ('We', 'PRP'), ('are', 'VBP'), ('with', 'IN'), ('you', 'PRP'), ('.', '.')]\n"
           ]
@@ -4798,16 +4798,16 @@
       "cell_type": "code",
       "execution_count": null,
       "metadata": {
-        "id": "-CrHju73ANY-",
         "colab": {
           "base_uri": "https://localhost:8080/"
         },
+        "id": "-CrHju73ANY-",
         "outputId": "c223c662-2fd3-49da-d868-90e378377788"
       },
       "outputs": [
         {
-          "output_type": "stream",
           "name": "stdout",
+          "output_type": "stream",
           "text": [
             "['@KremlinRussia_E', 'President', 'Putin', 'of', 'russia', 'be', 'on', 'right', 'path', 'in', 'ukraine', 'war', '.', 'We', 'be', 'with', 'you', '.']\n"
           ]
@@ -4837,16 +4837,16 @@
       "cell_type": "code",
       "execution_count": null,
       "metadata": {
-        "id": "yjiCaEb9ANZE",
         "colab": {
           "base_uri": "https://localhost:8080/"
         },
+        "id": "yjiCaEb9ANZE",
         "outputId": "f2eff8af-1c7e-4664-b26f-9bba6009e595"
       },
       "outputs": [
         {
-          "output_type": "stream",
           "name": "stdout",
+          "output_type": "stream",
           "text": [
             "['president', 'putin', 'russia', 'right', 'path', 'ukraine', 'war']\n"
           ]
@@ -4861,15 +4861,14 @@
       "cell_type": "code",
       "execution_count": null,
       "metadata": {
-        "id": "wlRwUEZVANZF",
         "colab": {
           "base_uri": "https://localhost:8080/"
         },
+        "id": "wlRwUEZVANZF",
         "outputId": "b95bea53-dc74-4bee-ff53-eefb73f3a3be"
       },
       "outputs": [
         {
-          "output_type": "execute_result",
           "data": {
             "text/plain": [
               "[({'path': True,\n",
@@ -4919,8 +4918,9 @@
               "  1)]"
             ]
           },
+          "execution_count": 50,
           "metadata": {},
-          "execution_count": 50
+          "output_type": "execute_result"
         }
       ],
       "source": [
@@ -4974,16 +4974,16 @@
       "cell_type": "code",
       "execution_count": null,
       "metadata": {
-        "id": "5v6Qa9g55Yzr",
         "colab": {
           "base_uri": "https://localhost:8080/"
         },
+        "id": "5v6Qa9g55Yzr",
         "outputId": "25c0c3fa-f09c-4901-e46c-9edcb57a55c4"
       },
       "outputs": [
         {
-          "output_type": "stream",
           "name": "stdout",
+          "output_type": "stream",
           "text": [
             "Accuracy on train data: 0.9696969696969697\n",
             "Accuracy on test data: 0.9459459459459459\n",
@@ -5008,15 +5008,32 @@
     },
     {
       "cell_type": "markdown",
-      "source": [
-        "### Custom Tweet Test"
-      ],
       "metadata": {
         "id": "FuSKidEqAXAl"
-      }
+      },
+      "source": [
+        "### Custom Tweet Test"
+      ]
     },
     {
       "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "fjpEYLuTMylV",
+        "outputId": "360ddae3-8311-4ab6-d277-976017cf681c"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "0\n"
+          ]
+        }
+      ],
       "source": [
         "custom_tweet = \"@SpencerGuard: There is only a few hours to Russia's â€œVictory Dayâ€ parade &amp; Putin's speech (noon in Moscow). There can only be lies. Putâ€¦\"\n",
         "#\"️UN urges reopening of Odesa ports to abate global hunger crisis. The UN World Food Programme said in a statement…\"\n",
@@ -5027,48 +5044,29 @@
         "custom_tokens = remove_noise(token.tokenize(custom_tweet))\n",
         "\n",
         "print(classifier.classify(dict([token, True] for token in custom_tokens)))"
-      ],
-      "metadata": {
-        "id": "fjpEYLuTMylV",
-        "colab": {
-          "base_uri": "https://localhost:8080/"
-        },
-        "outputId": "360ddae3-8311-4ab6-d277-976017cf681c"
-      },
-      "execution_count": null,
-      "outputs": [
-        {
-          "output_type": "stream",
-          "name": "stdout",
-          "text": [
-            "0\n"
-          ]
-        }
       ]
     },
     {
       "cell_type": "code",
-      "source": [],
+      "execution_count": null,
       "metadata": {
         "id": "LtFrcsLYW5iJ"
       },
-      "execution_count": null,
-      "outputs": []
+      "outputs": [],
+      "source": []
     },
     {
       "cell_type": "code",
-      "source": [],
+      "execution_count": null,
       "metadata": {
         "id": "-38Seq4zW5SF"
       },
-      "execution_count": null,
-      "outputs": []
+      "outputs": [],
+      "source": []
     },
     {
       "cell_type": "code",
-      "source": [
-        "type(data2)"
-      ],
+      "execution_count": null,
       "metadata": {
         "colab": {
           "base_uri": "https://localhost:8080/"
@@ -5076,36 +5074,36 @@
         "id": "xmOeKEllWEep",
         "outputId": "34d80220-8ccb-40f8-e35e-7163a478a5bb"
       },
-      "execution_count": null,
       "outputs": [
         {
-          "output_type": "execute_result",
           "data": {
             "text/plain": [
               "list"
             ]
           },
+          "execution_count": 57,
           "metadata": {},
-          "execution_count": 57
+          "output_type": "execute_result"
         }
+      ],
+      "source": [
+        "type(data2)"
       ]
     },
     {
       "cell_type": "code",
-      "source": [
-        "data2_df = pd.DataFrame(data2)"
-      ],
+      "execution_count": null,
       "metadata": {
         "id": "N_jiUD-EWQgB"
       },
-      "execution_count": null,
-      "outputs": []
+      "outputs": [],
+      "source": [
+        "data2_df = pd.DataFrame(data2)"
+      ]
     },
     {
       "cell_type": "code",
-      "source": [
-        "data2_df.head(5)"
-      ],
+      "execution_count": null,
       "metadata": {
         "colab": {
           "base_uri": "https://localhost:8080/",
@@ -5114,26 +5112,9 @@
         "id": "vV0_gU5hWouE",
         "outputId": "7b5467a0-4633-4cab-81dc-d519c536c537"
       },
-      "execution_count": null,
       "outputs": [
         {
-          "output_type": "execute_result",
           "data": {
-            "text/plain": [
-              "                                                                                                                                                                                      0  \\\n",
-              "0  [@KremlinRussia_E, President, Putin, of, russia, is, on, right, path, in, ukraine, war, ., We, are, with, you, .]                                                                      \n",
-              "1  [As, bombs, fall, on, Ukraine, ,, many, European, governments, are, waking, up, to, the, sorry, state, of, their, own, civil, defenses, ., https://t.co/4oOJThCACp]                    \n",
-              "2  [RT, @washingtonpost, :, A, tremendous, surge, in, VPN, downloads, in, Russia, represents, a, challenge, to, Putin, and, his, version, of, the, Ukraine, war, ., http, …]              \n",
-              "3  [@russelljh, @FAO_Peripateric, @jeffreymparsons, @Abulinixish, @RT_com, If, Putin, really, wanted, a, war, 😂, he, would, have, done, …, https://t.co/SJLO4H1sZ5]                       \n",
-              "4  [RT, @katierogers, :, “, We, understand, what, it, takes, for, the, U, ., S, ., First, Lady, to, come, here, during, a, war, ,, where, the, military, actions, are, taking, plac, …]   \n",
-              "\n",
-              "     1  \n",
-              "0  1.0  \n",
-              "1  1.0  \n",
-              "2  1.0  \n",
-              "3  1.0  \n",
-              "4  1.0  "
-            ],
             "text/html": [
               "\n",
               "  <div id=\"df-f3a87e28-e10c-47c3-a4b2-eccd36cac0f6\">\n",
@@ -5265,11 +5246,30 @@
               "    </div>\n",
               "  </div>\n",
               "  "
+            ],
+            "text/plain": [
+              "                                                                                                                                                                                      0  \\\n",
+              "0  [@KremlinRussia_E, President, Putin, of, russia, is, on, right, path, in, ukraine, war, ., We, are, with, you, .]                                                                      \n",
+              "1  [As, bombs, fall, on, Ukraine, ,, many, European, governments, are, waking, up, to, the, sorry, state, of, their, own, civil, defenses, ., https://t.co/4oOJThCACp]                    \n",
+              "2  [RT, @washingtonpost, :, A, tremendous, surge, in, VPN, downloads, in, Russia, represents, a, challenge, to, Putin, and, his, version, of, the, Ukraine, war, ., http, …]              \n",
+              "3  [@russelljh, @FAO_Peripateric, @jeffreymparsons, @Abulinixish, @RT_com, If, Putin, really, wanted, a, war, 😂, he, would, have, done, …, https://t.co/SJLO4H1sZ5]                       \n",
+              "4  [RT, @katierogers, :, “, We, understand, what, it, takes, for, the, U, ., S, ., First, Lady, to, come, here, during, a, war, ,, where, the, military, actions, are, taking, plac, …]   \n",
+              "\n",
+              "     1  \n",
+              "0  1.0  \n",
+              "1  1.0  \n",
+              "2  1.0  \n",
+              "3  1.0  \n",
+              "4  1.0  "
             ]
           },
+          "execution_count": 61,
           "metadata": {},
-          "execution_count": 61
+          "output_type": "execute_result"
         }
+      ],
+      "source": [
+        "data2_df.head(5)"
       ]
     }
   ],
